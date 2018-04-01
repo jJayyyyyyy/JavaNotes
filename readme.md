@@ -6,3 +6,22 @@
 
 *	[面向对象程序设计——Java语言 - 浙大 - 翁恺](https://www.icourse163.org/learn/ZJU-1001542001?tid=1002311011)
 
+<br><br>
+
+###	Note01, Java 简介
+
+*	历史
+
+*	三大平台
+
+*	特点
+
+*	三种核心机制
+
+*	Java的编译与运行
+
+*	JVM, JRE, JDK
+
+*	垃圾回收
+
+<br><br>
