@@ -8,6 +8,14 @@
 
 <br><br>
 
+###	Eclipse快捷键
+
+在preference里面，搜索keys，可以查看和修改快捷键。
+
+*	Content Assist, 自动补全
+
+*	Format, 代码格式化
+
 ###	Note01, Java 简介
 
 *	历史
@@ -75,3 +83,16 @@
 *	类与对象
 
 <br><br>
+
+###	Note08
+
+*	对象交互
+
+*	访问控制
+
+*	包
+
+*	类变量, 类函数, static
+
+<br><br>
+
