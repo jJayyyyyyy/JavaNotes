@@ -8,13 +8,15 @@
 
 <br><br>
 
-###	Eclipse快捷键
+###	Eclipse
 
-在preference里面，搜索keys，可以查看和修改快捷键。
+*	在preference里面，搜索keys，可以查看和修改快捷键
 
 *	Content Assist, 自动补全
 
 *	Format, 代码格式化
+
+<br><br>
 
 ###	Note01, Java 简介
 
@@ -173,5 +175,27 @@
 *	抛出异常
 
 *	继承与异常
+
+<br><br>
+
+###	Note16, 流, 输入输出
+
+*	摘要
+
+*	流
+
+*	二进制流
+
+*	二进制流读写文件
+
+*	流过滤器
+
+*	文本流读写文件
+
+*	解析输入流
+
+*	流的应用, 网络流, socket通信
+
+*	对象串行化
 
 <br><br>
