@@ -1,5 +1,9 @@
 ##	简介
 
+*	入口
+
+	`[workspace]/src/lit/Lit.java`
+
 *	之前跟着 Udacity 学 Android 的时候, 自己做了个 app --- Lit, 意为 Lite Info Toolkit, 项目地址在[这里](https://github.com/jJayyyyyyy/Lit/tree/master/app/src/main/java/io/github/jjayyyyyyy/lit)
 
 	做这个 app 的时候, 没有系统地进行学习, 总结文档也没写 0.0, 结果好多东西都忘了, 真是惭愧... 
