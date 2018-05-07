@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class Dictionary {
 	private String youdaoDictURL = "http://dict.youdao.com/fsearch?q=";
-	private String pattern = "<content><!\\[CDATA\\[(.*?)\\]\\]>";
+	private String reDict = "<content><!\\[CDATA\\[(.*?)\\]\\]>";
 	
 	public String getTranslation (String query) {
 		String translation = "";
@@ -19,7 +19,7 @@ public class Dictionary {
 				String resp = req.getResp(strURL);
 				
 				if( resp != null ) {
-					Matcher m = Pattern.compile(pattern).matcher(resp);
+					Matcher m = Pattern.compile(reDict).matcher(resp);
 					if ( m.find() == true ) {
 						translation = m.group(1);
 					}
