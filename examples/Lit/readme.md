@@ -48,9 +48,63 @@
 
 	在 [Github](https://github.com/stleary/JSON-java/releases) 下载最新的release, 解压到目录 `[workspace]/src/org/json/` 即可在 Eclipse 中调用, 和 python 用包差不多, 很方便.
 
-*	TODO
+<br><br>
+
+##	思路与过程
+
+*	Request.java
+
+	首先实现 Request 类.
+
+	```
+	input: strURL
+
+	return strResp
+
+	inside: url.openConnection() --> InputStream --> InputStreamReader --> BufferedReader --> strResp
+	```
+
+*	其他类, 调用 
+
+	创建一个 Request 对象, 通过 HTTP(s) 获取 response, 再对 response 进行解析
+
+	```java
+	Request req = new Request();
+	req.https = true;	// 有些链接是 https 的, 有些不是
 	
-	研究 JSONObject 等文件的实现
+	String strURL = xxxURL;
+	String resp = req.getResp(strURL);
+	
+	if( resp != null ) {
+		// parse resp
+	}
+	```
+
+<br><br>
+
+##	分类
+
+*	针对不同的信息源/api, 我们应采取不同的方式对 response 进行解析
+
+*	如果目标网站提供了 json 接口, 那么就使用 org.json 这个包里面的类进行解析
+
+	示例: NewsFlash.java
+
+*	如果，没有规范的数据格式, 那么就分析 response, 找到目标字段的规律, 然后用 正则表达式 进行解析
+
+	示例: Dictionary.java, HackerNews.java, Solidot.java
+
+	对于天气模块 Weather.java, 由于其 html 比较杂乱, 而且白天和晚上的 html 代码会变化, 因此要考虑更复杂的情况
+
+<br><br>
+
+##	TODO
+	
+*	实现 GUI, 而不仅仅是 Console
+
+*	多线程
+
+*	研究 JSONObject 等文件的实现
 
 <br><br>
 
