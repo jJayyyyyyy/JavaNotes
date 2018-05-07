@@ -13,7 +13,10 @@ public class NewsFlash {
 	
 	private void getNewsList() {
 		Request req = new Request();
-		String resp = req.getResp(newsflashURL);
+		req.https = true;
+		
+		String strURL = newsflashURL;
+		String resp = req.getResp(strURL);
 		
 		if ( resp != null ) {
 			try {

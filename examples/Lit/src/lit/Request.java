@@ -4,15 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
-
 import javax.net.ssl.HttpsURLConnection;
 
-import org.json.JSONObject;
-
 public class Request {
+
+	public boolean https = true;
 
 	private URL getURL(String strURL) {
 		URL url = null;
@@ -23,10 +23,10 @@ public class Request {
 		}
 		return url;
 	}
-	
+
 	private String readFromStream(InputStream is) {
 		StringBuilder sb = new StringBuilder();
-		
+
 		if( is != null ) {
 			InputStreamReader isReader = new InputStreamReader(is, Charset.forName("UTF-8"));
 			BufferedReader bufReader = new BufferedReader(isReader);
@@ -43,22 +43,27 @@ public class Request {
 		}
 		return sb.toString();
 	}
-	
+
 	public String getResp(String strURL) {
 		URL url = getURL(strURL);
 		String resp = "";
-		
+
 		if( url != null ) {
-			HttpsURLConnection conn = null;
+			HttpURLConnection conn = null;
+
 			InputStream is = null;
 
 			try {
-				conn = (HttpsURLConnection) url.openConnection();
+				if( this.https == true ) {
+					conn = (HttpsURLConnection) url.openConnection();
+				}else {
+					conn = (HttpURLConnection) url.openConnection();
+				}
 				conn.setRequestMethod("GET");
 				conn.setConnectTimeout(5000);
 				conn.setReadTimeout(2000);
 				conn.connect();
-				
+
 				if ( conn.getResponseCode() == 200 ) {
 					is = conn.getInputStream();
 					resp = readFromStream(is);
@@ -69,6 +74,6 @@ public class Request {
 				e.printStackTrace();
 			}
 		}
-		return resp;		
+		return resp;
 	}
 }
