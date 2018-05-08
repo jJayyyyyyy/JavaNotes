@@ -15,11 +15,32 @@ public class Lit {
 		System.out.println(trans);
 	}
 	
+	private void testSolidot() {
+		Solidot solidot = new Solidot();
+		solidot.printNews();
+	}
+	
+	private void testHackerNews() {
+		HackerNews hackernews = new HackerNews();
+		hackernews.printNews();
+	}
+	
+	private void testWeather() {
+		Weather weather = new Weather();
+		weather.printWeather();
+	}
+	
 	public static void main(String[] args) {
-		Lit lit = new Lit();
+//		Lit lit = new Lit();
 		
 //		lit.testNewsFlash();
+		
 //		lit.testDictionary();
+		
+//		lit.testSolidot();
+		
+//		lit.testHackerNews();
+		
+//		lit.testWeather();	
 	}
-
 }
