@@ -19,7 +19,9 @@
 	2006, JDK 1.6, 广泛, Compiler API(动态编译), 脚本语言支持, WebService支持
 	2010, Oracle并购SUN
 	2011, JDK 1.7, 带资源的try, 重抛异常
-	2006, JDK 1.8, 大改进, lambda表达式
+	2014, JDK 1.8, 大改进, lambda表达式
+
+	注: 从 JDK 1.5 之后, JDK 1.x 也被称为 JDK x, 如 JDK 1.8 也被叫做 Java 8
 	```
 
 *	JCP, Java Community Process, 社区
